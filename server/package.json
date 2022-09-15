@@ -1,0 +1,10 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "description": "Backend for ReidAvenue",
+  "main": "src/index.js",
+  "repository": "https://github.com/Rapid-Application-Developement-UCSC/ReidAvenue",
+  "author": "Nethsara Sandeepa Elvitigala <nethsarasandeepaelvitigala@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
