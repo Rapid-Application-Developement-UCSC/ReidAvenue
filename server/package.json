@@ -6,5 +6,22 @@
   "repository": "https://github.com/Rapid-Application-Developement-UCSC/ReidAvenue",
   "author": "Nethsara Sandeepa Elvitigala <nethsarasandeepaelvitigala@gmail.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "mongoose": "^6.6.1",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
 }
