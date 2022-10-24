@@ -1,0 +1,23 @@
+.landing-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 2rem;
+  height: 70px;
+  background-color: transparent;
+  color: #fff;
+}
+
+.landing-header p {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.landing-header ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}

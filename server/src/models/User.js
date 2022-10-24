@@ -17,12 +17,14 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  username: {
-    type: String,
-    required: true,
+
+  //field to store valid refresh tokens as an array
+  refreshTokens: {
+    type: [String],
+    defualt: [],
   },
 });
 
-const userModel = mongoose.model("User", userSchema);
+const User = mongoose.model("User", userSchema);
 
-export default userModel;
+export default User;
