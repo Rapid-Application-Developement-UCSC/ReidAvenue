@@ -109,4 +109,30 @@ postController.delete("/:id", isAuthenticated, async (req, res) => {
   }
 });
 
+postController.patch("/:id/like", isAuthenticated, async (req, res) => {
+  const userId = req.userId;
+  const postId = req.params.id;
+  const post = await Post.findById(postId);
+  const like = await Like.findOne({ post: postId, user: userId });
+  if (!like) {
+    await Like.create({ post: postId, user: userId });
+  }
+  post.likes = await Like.find({ post: postId });
+  await post.save();
+  res.redirect(307, `/notifications/add/${postId}`);
+});
+
+postController.delete("/:id/like", isAuthenticated, async (req, res) => {
+  const userId = req.userId;
+  const postId = req.params.id;
+  const post = await Post.findById(postId);
+  const like = await Like.findOne({ post: postId, user: userId });
+  if (like) {
+    await Like.findByIdAndDelete(like._id);
+  }
+  post.likes = await Like.find({ post: postId });
+  await post.save();
+  res.status(204).end();
+});
+
 export default postController;
