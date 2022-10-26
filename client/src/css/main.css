@@ -1,18 +1,29 @@
 /* Importing fonts */
 @import url("http://fonts.cdnfonts.com/css/billabong");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
 /* Importing css variables */
 @import "./variables/colors.css";
+
+/* Importing layouts */
+@import "./layouts/app-layout.css";
 
 /* Importing page styles */
 @import "./pages/signup-page.css";
 @import "./pages/login-page.css";
 @import "./pages/index-page.css";
-@import "./pages/feed_page.css";
+@import "./pages/app/feed_page.css";
+@import "./pages/app/new-post-page.css";
+@import "./pages/app/friends-page.css";
+@import "./pages/app/collections-page.css";
 
 /* Importing components */
 @import "./components/layout/landing-header.css";
 @import "./components/layout/app-header.css";
+@import "./components/utils/post.css";
+@import "./components/utils/friend.css";
+@import "./components/utils/user.css";
+@import "./components/utils/notification.css";
 
 .ff-brand {
   font-family: "Billabong", sans-serif;
@@ -25,4 +36,5 @@
 body {
   overflow-x: hidden;
   scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
 }
