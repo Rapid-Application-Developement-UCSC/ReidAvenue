@@ -1,0 +1,21 @@
+.notifications {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.notification {
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+}
+
+.notification svg {
+  color: red;
+  cursor: pointer;
+}

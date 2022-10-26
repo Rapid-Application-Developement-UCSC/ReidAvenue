@@ -33,6 +33,14 @@ export const router = createBrowserRouter([
         path: "/app/my-posts",
         element: <MyPostsPage />,
       },
+      {
+        path: "/app/friends",
+        element: <FriendsPage />,
+      },
+      {
+        path: "/app/collections",
+        element: <CollectionsPage />,
+      },
     ],
   },
   {

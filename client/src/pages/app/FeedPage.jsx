@@ -13,7 +13,6 @@ export default function FeedPage() {
         Authorization: `Bearer ${token}`,
       },
     });
-    console.log(response.data);
     setPosts(response.data);
   }
 

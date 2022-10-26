@@ -13,7 +13,11 @@ export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const [isLoading, setIsLoading] = useState(false);
+
   async function submitData() {
+    setIsLoading(true);
+
     try {
       const response = await apiInstance.post(
         "/auth/login",
@@ -25,10 +29,12 @@ export default function LoginPage() {
       );
       if (response.status === 200) {
         setUserAndToken(response.data.user, response.data.token);
-        navigate("/");
+        navigate("/app/feed");
       }
     } catch (error) {
       console.error(error);
+    } finally {
+      setIsLoading(false);
     }
   }
 
@@ -66,7 +72,7 @@ export default function LoginPage() {
               Signup
             </Link>
           </p>
-          <Button colorScheme="green" type="submit">
+          <Button colorScheme="green" type="submit" isLoading={isLoading}>
             Sign in
           </Button>
         </form>

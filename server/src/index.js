@@ -18,6 +18,7 @@ import authController from "./controllers/auth-controller.js";
 import postController from "./controllers/post-controller.js";
 import friendController from "./controllers/friend-controller.js";
 import notificationsController from "./controllers/notification-controller.js";
+import collectionsController from "./controllers/collections-controller.js";
 
 // reading certificate and key files
 const key = fs.readFileSync("./key.pem");
@@ -47,6 +48,7 @@ app.use("/auth", authController);
 app.use("/posts", postController);
 app.use("/friends", friendController);
 app.use("/notifications", notificationsController);
+app.use("/collections", collectionsController);
 
 const PORT = process.env.PORT || 5000;
 

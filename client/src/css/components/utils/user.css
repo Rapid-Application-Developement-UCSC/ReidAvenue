@@ -1,0 +1,19 @@
+.user {
+  background-color: #eee;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user p {
+  font-size: 1.2rem;
+}
+
+.user svg {
+  cursor: pointer;
+  color: rgb(47, 164, 47);
+}
