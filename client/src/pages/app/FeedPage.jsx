@@ -8,7 +8,7 @@ export default function FeedPage() {
   const [posts, setPosts] = useState([]);
 
   async function loadPost() {
-    const response = await apiInstance.get("/posts", {
+    const response = await apiInstance.get("/posts/all", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
