@@ -28,7 +28,6 @@ postController.get("/", isAuthenticated, async (req, res) => {
 
   for (const friendId of user.friends) {
     const friend = await User.findById(friendId);
-    console.log(`friend is ${friend.firstName}`);
     let friendPosts = await Post.find({ postedBy: friendId }).sort({
       createdAt: -1,
     });
@@ -74,7 +73,6 @@ postController.post(
   upload.single("image"),
   async (req, res) => {
     const userId = req.userId;
-    // console.log(userId);
     try {
       const id = mongoose.Types.ObjectId(userId);
     } catch (err) {
