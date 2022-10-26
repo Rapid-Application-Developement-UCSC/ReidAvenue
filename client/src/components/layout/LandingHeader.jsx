@@ -5,7 +5,6 @@ export default function LandingHeader() {
   const user = authStore((state) => state.user);
   const logout = authStore((state) => state.logoutUser);
 
-  console.log(user);
   return (
     <header className="landing-header">
       <p className="ff-brand">Reid Avenue</p>
