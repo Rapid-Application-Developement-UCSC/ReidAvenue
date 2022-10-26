@@ -19,20 +19,6 @@ import Collection from "../../components/utils/Collection";
 
 export default function CollectionsPage() {
   const token = authStore((state) => state.token);
-  // const [posts, setPosts] = useState([]);
-
-  // async function loadPost() {
-  //   const response = await apiInstance.get("/posts", {
-  //     headers: {
-  //       Authorization: `Bearer ${token}`,
-  //     },
-  //   });
-  //   setPosts(response.data);
-  // }
-
-  // useEffect(() => {
-  //   loadPost();
-  // }, []);
 
   const [collections, setCollections] = useState([]);
 
