@@ -18,7 +18,7 @@ export default function Post(props) {
   const [isLiked, setIsLiked] = useState(false);
 
   async function loadPost() {
-    const response = await apiInstance.get(`/posts/${props._id}`, {
+    const response = await apiInstance.get(`/posts/get-post/${props._id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
