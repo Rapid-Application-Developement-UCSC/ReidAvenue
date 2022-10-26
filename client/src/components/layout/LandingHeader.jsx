@@ -24,7 +24,16 @@ export default function LandingHeader() {
         </ul>
       ) : (
         <ul>
-          <li>{"Welcome, " + user.firstName + " " + user.lastName}</li>
+          <li>
+            {"Welcome, " +
+              user.firstName +
+              " " +
+              user.lastName +
+              ", Go to your"}{" "}
+            <Link as={RouterLink} to="/app/feed">
+              Feed
+            </Link>{" "}
+          </li>
           <li>
             <Button colorScheme="green" onClick={logout}>
               Sign out

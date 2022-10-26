@@ -8,9 +8,11 @@
 @import "./pages/signup-page.css";
 @import "./pages/login-page.css";
 @import "./pages/index-page.css";
+@import "./pages/feed_page.css";
 
 /* Importing components */
 @import "./components/layout/landing-header.css";
+@import "./components/layout/app-header.css";
 
 .ff-brand {
   font-family: "Billabong", sans-serif;

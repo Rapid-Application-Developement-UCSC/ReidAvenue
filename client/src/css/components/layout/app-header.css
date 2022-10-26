@@ -1,0 +1,53 @@
+.app-header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 2rem;
+}
+
+.app-header .home-link {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.app-header ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.app-header ul svg {
+  font-size: 1.5rem;
+}
+
+.app-header .actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.notifications-btn,
+.logout-btn {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.notifications-btn:hover,
+.logout-btn:hover {
+  background-color: #eee;
+}
+
+.notifications-btn svg,
+.logout-btn svg {
+  font-size: 1.5rem;
+}
+
+.logout-btn svg {
+  color: #f56565;
+}
