@@ -16,7 +16,7 @@ export default function Post(props) {
 
   async function deletePost() {
     try {
-      await apiInstance.delete(`/posts/${props._id}`, {
+      await apiInstance.delete(`/posts/get-post/${props._id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
