@@ -21,7 +21,7 @@ const upload = multer({
   },
 });
 
-postController.get("/", isAuthenticated, async (req, res) => {
+postController.get("/all", isAuthenticated, async (req, res) => {
   const userId = req.userId;
   const user = await User.findById(userId).populate("friends");
   let posts = [];
