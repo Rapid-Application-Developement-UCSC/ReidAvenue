@@ -1,0 +1,19 @@
+.friend {
+  background-color: #eee;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.friend p {
+  font-size: 1.2rem;
+}
+
+.friend svg {
+  cursor: pointer;
+  color: #ff0000;
+}
