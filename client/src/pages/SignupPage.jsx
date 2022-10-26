@@ -12,7 +12,10 @@ export default function SignupPage() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
+  const [isLoading, setIsLoading] = useState(false);
+
   async function submitData() {
+    setIsLoading(true);
     try {
       const response = await apiInstance.post("/auth/signup", {
         firstName,
@@ -21,12 +24,13 @@ export default function SignupPage() {
         password,
         confirmPassword,
       });
-      console.log(response);
       if (response.status === 201) {
         navigate("/login");
       }
     } catch (error) {
       console.error(error);
+    } finally {
+      setIsLoading(false);
     }
   }
 
@@ -89,7 +93,7 @@ export default function SignupPage() {
               Sign in
             </Link>
           </p>
-          <Button colorScheme="green" type="submit">
+          <Button colorScheme="green" type="submit" isLoading={isLoading}>
             Register
           </Button>
         </form>

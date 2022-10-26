@@ -54,7 +54,6 @@ export const authStore = create((set, get) => ({
         },
       }
     );
-    console.log(response);
     clearInterval(interval);
     return set(() => ({ user: null, token: null }));
   },

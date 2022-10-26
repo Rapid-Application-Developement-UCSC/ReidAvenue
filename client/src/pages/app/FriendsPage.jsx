@@ -15,7 +15,10 @@ export default function FriendsPage() {
   const [searchedUsers, setSearchedUsers] = useState([]);
   const [friends, setFriends] = useState([]);
 
+  const [isSearching, setIsSearching] = useState(false);
+
   async function searchFriend() {
+    setIsSearching(true);
     let fName = friendName.toLowerCase().trim();
     if (!fName || fName.includes(" ")) {
       alert("Please enter a valid name");
@@ -33,13 +36,14 @@ export default function FriendsPage() {
           _id: user._id,
         };
       });
-      console.log(u);
       setSearchedUsers(u);
       if (u.length == 0) {
         alert("No users found with that first name");
       }
     } catch (error) {
       console.error(error);
+    } finally {
+      setIsSearching(false);
     }
   }
 
@@ -50,8 +54,6 @@ export default function FriendsPage() {
           Authorization: `Bearer ${token}`,
         },
       });
-      console.log(response);
-      console.log(response.data);
       const f = response.data.map((friend) => {
         return {
           fullName: friend.firstName + " " + friend.lastName,
@@ -87,7 +89,7 @@ export default function FriendsPage() {
             }}
           />
 
-          <Button colorScheme="green" type="submit">
+          <Button colorScheme="green" type="submit" isLoading={isSearching}>
             search
           </Button>
         </form>

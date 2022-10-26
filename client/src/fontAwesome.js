@@ -10,6 +10,10 @@ import {
   faUserFriends,
   faBell,
   faRightFromBracket,
+  faTrash,
+  faUserMinus,
+  faUserPlus,
+  faXmarkCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -22,5 +26,9 @@ library.add(
   faFolder,
   faSquarePlus,
   faBell,
-  faRightFromBracket
+  faRightFromBracket,
+  faTrash,
+  faUserMinus,
+  faUserPlus,
+  faXmarkCircle
 );
